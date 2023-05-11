@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Canada Tax Calculator</title>
+
+    <style>
+        body {
+          background-color: black;
+          color: white;
+          padding-top: 15%;
+        }
+        
+        input[type=text]{
+            padding: 1%;
+            font-size: 200%;
+            background-color: darkgray;
+        }
+
+        button{
+            font-size: 200%;
+            border-radius: 5px;
+           background-color: gray;
+        }
+
+        div {
+          font-family: verdana;
+          font-size: 200%;
+          text-align: center;
+        }
+        </style>
+</head>
+
+<body>
+  <div>
+  <label for="price">Enter the price:</label>
+  <input type="text" id="price" name="price"><br><br>
+  <button onclick="calculate()">Calculate</button> <br><br>
+  <label for="newprice">Price with tax is:</label>
+  </div><br>
+  
+  <div id="output" name="output"></div>
+  <script>
+    function calculate() {
+    var price = document.getElementById("price").value;
+    document.getElementById("output").innerHTML = (price*113)/100;
+    }
+  </script>
+</body>
+</html>
